@@ -48,7 +48,7 @@ impl Controller for IOController {
    * Retrieves the next chosen move from the white or black player based on
    * the provided white_turn bool parameter
    */
-  fn get_move(&self, white_turn: bool) -> PieceMove {
+  fn get_move(&mut self, white_turn: bool) -> PieceMove {
     if white_turn {
       return self.get_white_move();
     } else {
